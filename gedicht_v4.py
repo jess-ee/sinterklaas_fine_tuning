@@ -31,8 +31,8 @@ from streamlit_feedback import streamlit_feedback
 
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
 os.environ["LANGCHAIN_ENDPOINT"] = "https://api.langchain.plus"
-os.environ["LANGCHAIN_API_KEY"] = "ls__553e5d5b5c834479a5c3d9c8029793e7"
-os.environ["LANGCHAIN_PROJECT"] = "sinterklaas-finetuning"
+os.environ["LANGCHAIN_API_KEY"] = os.environ.get("LANGCHAIN_API_KEY")
+os.environ["LANGCHAIN_PROJECT"] = "gedicht-finetuning"
 
 
 os.environ['OPENAI_API_KEY'] = apikey
