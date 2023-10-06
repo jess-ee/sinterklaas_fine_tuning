@@ -1,7 +1,6 @@
 #Importing dependencies
 import os 
 import langchain
-from apikey import apikey
 import streamlit as st 
 import time
 import re
@@ -35,7 +34,7 @@ os.environ["LANGCHAIN_API_KEY"] = os.environ.get("LANGCHAIN_API_KEY")
 os.environ["LANGCHAIN_PROJECT"] = "gedicht-finetuning"
 
 
-os.environ['OPENAI_API_KEY'] = apikey
+apikey = os.getenv('OPENAI_API_KEY')
 
 client = Client(api_url=os.environ["LANGCHAIN_ENDPOINT"], api_key=os.environ["LANGCHAIN_API_KEY"])
 
