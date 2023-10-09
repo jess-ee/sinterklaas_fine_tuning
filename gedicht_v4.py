@@ -144,19 +144,15 @@ if st.session_state.get('response'):
     st.text(poem_text)
 if st.session_state.get('run_id'):
     with st.form(key='feedback_form'):
-        rating = st.radio("Rating:", [1, 2, 3, 4, 5])
+        # Modify the options for the rating radio button
+        rating = st.radio("Reeting:", [(0, "niet correct"), (1, "correct")])
+        
+        # When the user presses the Submit button, record the feedback
         if st.form_submit_button('Submit'):
             feedback_record = client.create_feedback(
                 st.session_state['run_id'],
-                f"score_{rating}",
-                score=rating,
+                f"score_{rating[0]}",  # Use the first element of the tuple for the score
+                score=rating[0],  # Use the first element of the tuple for the score
                 # comment=feedback.get("text"),
             )
             st.write('feedback recorded')
-        
-    if st.button('Reset'):
-        st.session_state['previous_output'] = ""  # Reset to initial value
-        st.session_state['run_id'] = None  # Reset to initial value
-        st.session_state['response'] = None
-        st.experimental_rerun()  # Force a rerun of the script to reflect the reset immediatel
-    
