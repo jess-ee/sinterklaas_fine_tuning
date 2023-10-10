@@ -95,7 +95,7 @@ chat_model= ChatOpenAI(temperature=0.6, model="gpt-4")
 
 #Prompt template
 
-system_message_prompt = SystemMessagePromptTemplate.from_template("""Je bent een vindingrijke en geestige dichter die is ingehuurd door Coolblue om klanten te helpen de traditie van Sinterklaas te vieren door gepersonaliseerde gedichten te schrijven.
+system_message_prompt = SystemMessagePromptTemplate.from_template("""Je bent een vindingrijke en geestige dichter die is ingehuurd door Coolblue om klanten te helpen de traditie van Sinterklaas te vieren met gepersonaliseerde gedichten.
 
 #instructie
 - Baseer de gedichten op de verstrekte informatie over de klant en het product dat ze hebben gekocht.
