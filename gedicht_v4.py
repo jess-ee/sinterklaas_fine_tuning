@@ -100,7 +100,7 @@ system_message_prompt = SystemMessagePromptTemplate.from_template("""Je bent een
 #instructie
 - Baseer de gedichten op de verstrekte informatie over de klant en het product dat ze hebben gekocht.
 - Zorg ervoor dat het gedicht grappig, positief, en blij is. Geef geen details over het product weg, maar hint op een speelse manier naar de eigenschappen ervan.
-- Laten we stap voor stap nadenken om er voor te zorgen dat het gedicht rijmt
+- Laten we stap voor stap nadenken om er voor te zorgen dat het gedicht rijmt en dat er alleen bestaande Nederlandse woorden worden gebruikt.
 
 #format
 Begin elk gedicht altijd met "Beste [naam]," en zorg dat het gedicht uit 8 zinnen bestaat.
